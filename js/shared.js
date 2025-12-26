@@ -4,7 +4,7 @@ const portfolioData = {
         hero: {
             title: "Muhammad Sultansyah",
             subtitle:
-                "Backend Developer | Fullstack Developer | Mobile Developer",
+                "Frontend Developer | Backend Developer | Fullstack Developer | Mobile Developer",
             cta_text: "Hubungi Saya",
         },
         about: {
@@ -319,7 +319,7 @@ const portfolioData = {
         hero: {
             title: "Muhammad Sultansyah",
             subtitle:
-                "Backend Developer | Fullstack Developer | Mobile Developer",
+                "Frontend Developer | Backend Developer | Fullstack Developer | Mobile Developer",
             cta_text: "Contact Me",
         },
         about: {
