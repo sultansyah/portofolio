@@ -865,10 +865,10 @@ function updateEducation(educationItems, lang) {
 function updateProjects(projects, lang) {
     const container = document.getElementById("projectsContainer");
     if (!container) return;
-    
+
     container.innerHTML = "";
 
-    projects.forEach((project) => {
+    projects.forEach((project, index) => {
         const projectElement = document.createElement("div");
         projectElement.className = "col-md-12 mb-4";
 
@@ -880,7 +880,7 @@ function updateProjects(projects, lang) {
                 linkHtml += `<a href="${link.url}" target="_blank" class="btn btn-sm btn-outline-primary me-2 mb-2">${link.text}</a>`;
             });
         }
-		
+
         if (project.note) {
             linkHtml += `<span class="badge bg-warning text-dark me-2 mb-2">${project.note}</span>`;
         }
@@ -910,18 +910,48 @@ function updateProjects(projects, lang) {
         technologiesHtml += "</div>";
 
 
-        let imagesHtml = "";
+        let carouselHtml = "";
         if (project.images && project.images.length > 0) {
-            project.images.forEach((image) => {
-                imagesHtml += `<img src="${image}" class="img-fluid" alt="Project Image">`;
+            const carouselId = `projectCarousel${index}`;
+
+            carouselHtml = `
+                <div id="${carouselId}" class="carousel slide project-carousel" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
+                    <div class="carousel-indicators">`;
+
+            project.images.forEach((image, imgIndex) => {
+                carouselHtml += `
+                        <button type="button" data-bs-target="#${carouselId}" data-bs-slide-to="${imgIndex}" ${imgIndex === 0 ? 'class="active"' : ''}></button>`;
             });
+
+            carouselHtml += `
+                    </div>
+                    <div class="carousel-inner">`;
+
+            project.images.forEach((image, imgIndex) => {
+                carouselHtml += `
+                        <div class="carousel-item ${imgIndex === 0 ? 'active' : ''}">
+                            <img src="${image}" class="d-block w-100" alt="Project Image">
+                        </div>`;
+            });
+
+            carouselHtml += `
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#${carouselId}" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#${carouselId}" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>`;
         }
 
         projectElement.innerHTML = `
             <div class="card">
                 <div class="project-card-inner">
                     <div class="project-images">
-                        ${imagesHtml}
+                        ${carouselHtml}
                     </div>
                     <div class="project-details">
                         <h5 class="fw-bold card-title">${project.title}</h5>
