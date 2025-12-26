@@ -9,8 +9,8 @@ const portfolioData = {
         },
         about: {
             title: "Tentang Saya",
-            description:
-                "Full-Stack Software Engineer berpengalaman dalam pengembangan web dan mobile, menguasai Next.js, Laravel, Golang, MySQL, dan React Native, dengan kemampuan problem-solving yang kuat dan kolaboratif.",
+            description: "Saya adalah seorang software engineer yang bersemangat dalam pengembangan perangkat lunak dengan fokus pada teknologi web dan mobile. Saya memiliki pengalaman dalam membangun aplikasi yang skalabel dan user-friendly menggunakan berbagai teknologi modern.",
+            description2: "Saya percaya pada pengembangan perangkat lunak yang berkelanjutan dan terus belajar teknologi baru untuk memberikan solusi terbaik bagi pengguna dan organisasi."
         },
         skills: {
             title: "Keahlian",
@@ -324,8 +324,8 @@ const portfolioData = {
         },
         about: {
             title: "About Me",
-            description:
-                "Full-Stack Software Engineer with experience in web and mobile development, proficient in Next.js, Laravel, Golang, MySQL, and React Native, with strong problem-solving and collaborative skills.",
+            description: "I am a passionate software engineer focused on web and mobile technology development. I have experience building scalable and user-friendly applications using various modern technologies.",
+            description2: "I believe in sustainable software development and continuously learning new technologies to provide the best solutions for users and organizations."
         },
         skills: {
             title: "Skills",
@@ -656,11 +656,6 @@ function updateContent(lang) {
         document.getElementById("cvDownloadEnBtn").href = "CV Muhammad Sultansyah Bahasa Inggris.pdf";
     }
 
-    // Update about section (if exists)
-    if (document.getElementById("aboutTitle")) {
-        document.getElementById("aboutTitle").textContent = data.about.title;
-        document.getElementById("aboutDescription").textContent = data.about.description;
-    }
 
     // Update skills section (if exists)
     if (document.getElementById("skillsTitle")) {
@@ -703,25 +698,10 @@ function updateContent(lang) {
         updateCertifications(data.certifications, lang);
     }
 
-    // Update contact (if exists)
-    if (document.getElementById("contactTitle")) {
-        document.getElementById("contactTitle").textContent = data.contact.title;
-        document.getElementById("contactEmail").textContent = data.contact.email;
-        document.getElementById("contactEmail").href = "mailto:" + data.contact.email;
-        document.getElementById("contactLinkedin").textContent = data.contact.linkedin.replace("https://", "");
-        document.getElementById("contactLinkedin").href = data.contact.linkedin;
-        document.getElementById("contactGithub").textContent = data.contact.github.replace("https://", "");
-        document.getElementById("contactGithub").href = data.contact.github;
-        document.getElementById("contactPortfolio").textContent = data.contact.portfolio.replace("https://", "");
-        document.getElementById("contactPortfolio").href = data.contact.portfolio;
-    }
 
     // Update navigation
     if (document.getElementById("navbarBrand")) {
         document.getElementById("navbarBrand").textContent = data.hero.title;
-    }
-    if (document.getElementById("navAbout")) {
-        document.getElementById("navAbout").textContent = data.about.title;
     }
     if (document.getElementById("navSkills")) {
         document.getElementById("navSkills").textContent = data.skills.title;
@@ -741,13 +721,11 @@ function updateContent(lang) {
     if (document.getElementById("navCertifications")) {
         document.getElementById("navCertifications").textContent = data.certifications.title;
     }
-    if (document.getElementById("navContact")) {
-        document.getElementById("navContact").textContent = data.contact.title;
-    }
 
     // Update CV download button (if exists)
     if (document.getElementById("cvDownloadBtn")) {
-        document.getElementById("cvDownloadBtn").textContent = data.cv_download;
+        const cvButtonText = currentLanguage === 'id' ? 'Lihat CV' : 'View CV';
+        document.getElementById("cvDownloadBtn").innerHTML = `<i class="fas fa-file-pdf me-1"></i>${cvButtonText}`;
         document.getElementById("cvDownloadBtn").href = data.cv_filename;
     }
 
@@ -761,12 +739,16 @@ function updateContent(lang) {
         if (lang === "id") {
             document.getElementById("langIdBtn").classList.remove("btn-outline-secondary");
             document.getElementById("langIdBtn").classList.add("btn-primary");
+            document.getElementById("langIdBtn").classList.add("active");
             document.getElementById("langEnBtn").classList.remove("btn-primary");
+            document.getElementById("langEnBtn").classList.remove("active");
             document.getElementById("langEnBtn").classList.add("btn-outline-secondary");
         } else {
             document.getElementById("langEnBtn").classList.remove("btn-outline-secondary");
             document.getElementById("langEnBtn").classList.add("btn-primary");
+            document.getElementById("langEnBtn").classList.add("active");
             document.getElementById("langIdBtn").classList.remove("btn-primary");
+            document.getElementById("langIdBtn").classList.remove("active");
             document.getElementById("langIdBtn").classList.add("btn-outline-secondary");
         }
     }
