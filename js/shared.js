@@ -1,4 +1,3 @@
-// Shared portfolio data and functionality
 const portfolioData = {
     id: {
         hero: {
@@ -314,7 +313,7 @@ const portfolioData = {
         },
         cv_download: "Unduh CV",
         cv_filename: "CV Muhammad Sultansyah Bahasa Indonesia.pdf",
-        footer: "© 2024 Muhammad Sultansyah. Hak Cipta Dilindungi.",
+        footer: "© {{year}} Muhammad Sultansyah. Hak Cipta Dilindungi.",
     },
     en: {
         hero: {
@@ -629,7 +628,7 @@ const portfolioData = {
         },
         cv_download: "Download CV",
         cv_filename: "CV Muhammad Sultansyah Bahasa Inggris.pdf",
-        footer: "© 2024 Muhammad Sultansyah. All Rights Reserved.",
+        footer: "© {{year}} Muhammad Sultansyah. All Rights Reserved.",
     },
 };
 
@@ -736,7 +735,9 @@ function updateContent(lang) {
 
     // Update footer (if exists)
     if (document.getElementById("footerText")) {
-        document.getElementById("footerText").textContent = data.footer;
+        const currentYear = new Date().getFullYear();
+        const footerText = data.footer.replace('{{year}}', currentYear);
+        document.getElementById("footerText").textContent = footerText;
     }
 
     // Update language button states
