@@ -17,12 +17,12 @@ const portfolioData = {
             frontend: {
                 title: "Frontend",
                 icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layout"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>`,
-                technologies: "HTML, JavaScript, NextJS",
+                technologies: "HTML, JavaScript, Next.js, Tailwind",
             },
             backend: {
                 title: "Backend",
                 icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-server"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>`,
-                technologies: "PHP, Laravel, Golang, MySQL, NextJS, CodeIgniter",
+                technologies: "PHP, Laravel, Golang, MySQL, Next.js, CodeIgniter",
             },
             mobile: {
                 title: "Mobile",
@@ -40,7 +40,7 @@ const portfolioData = {
                     description:
                         "Memelihara dan mengembangkan aplikasi web dan mobile",
                     technologies:
-                        "NextJS, React Native, PHP, CodeIgniter, JavaScript, HTML, MySQL, Git",
+                        "Next.js, React Native, PHP, CodeIgniter, JavaScript, HTML, MySQL, Git, Tailwind",
                 },
                 {
                     position: "Full-Stack Software Engineer",
@@ -109,7 +109,6 @@ const portfolioData = {
                     period: "2020 - 2024",
                     description: [
                         "Mempelajari implementasi algoritma, pemrograman web dan mobile, basis data berbasis SQL, pemrograman berorientasi objek (OOP), dan desain sistem.",
-                        "Berhasil menyelesaikan proyek skripsi, berkontribusi hampir 90% dalam proyek tim yang terdiri dari lima orang, menerapkan keterampilan teknis dan menunjukkan kepemimpinan.",
                     ],
                 },
                 {
@@ -214,7 +213,7 @@ const portfolioData = {
                     title:
                         "Full-Stack Golang Vue NuxtJS: Website Crowdfunding (Course from BuildWithAngga)",
                     description:
-                        "Proyek ini saya buat berdasarkan pembelajaran dari kursus Full-Stack Golang Vue NuxtJS. Proyek ini merupakan sebuah website crowdfunding yang menggunakan teknologi modern. Dalam prosesnya, saya mengembangkan backend menggunakan Golang untuk API, serta frontend yang interaktif dan responsif menggunakan Vue JS dan NuxtJS. Saya juga mempelajari dan berhasil mengintegrasikan pembayaran menggunakan Midtrans Payment Gateway.",
+                        "Proyek ini saya buat berdasarkan pembelajaran dari kursus Full-Stack Golang Vue NuxtJS. Proyek ini merupakan sebuah website crowdfunding yang menggunakan teknologi modern. Dalam prosesnya, saya mengembangkan backend menggunakan Golang untuk API, serta frontend yang interaktif dan responsif menggunakan Vue.js dan Nuxt.js. Saya juga mempelajari dan berhasil mengintegrasikan pembayaran menggunakan Midtrans Payment Gateway.",
                     links: [
                         {
                             text: "Link Github Backend",
@@ -227,13 +226,13 @@ const portfolioData = {
                     ],
                     technologies: {
                         frontend: [
-                            "Vue JS",
-                            "Nuxt JS",
+                            "Vue.js",
+                            "Nuxt.js",
                             "JavaScript",
                             "HTML",
                             "Tailwind",
                         ],
-                        backend: ["Golang", "Gin", "Gorm"],
+                        backend: ["Golang", "Gin Framework", "Gorm"],
                         database: ["MySQL"],
                         tools: ["Postman"],
                     },
@@ -334,12 +333,12 @@ const portfolioData = {
             frontend: {
                 title: "Frontend",
                 icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layout"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>`,
-                technologies: "HTML, JavaScript, NextJS",
+                technologies: "HTML, JavaScript, Next.js, Tailwind",
             },
             backend: {
                 title: "Backend",
                 icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-server"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>`,
-                technologies: "PHP, Laravel, Golang, MySQL, NextJS, CodeIgniter",
+                technologies: "PHP, Laravel, Golang, MySQL, Next.js, CodeIgniter",
             },
             mobile: {
                 title: "Mobile",
@@ -356,7 +355,7 @@ const portfolioData = {
                     period: "Jul 2025 - Present",
                     description: "Maintain and develop web and mobile applications",
                     technologies:
-                        "NextJS, React Native, PHP, CodeIgniter, JavaScript, HTML, MySQL, Git",
+                        "Next.js, React Native, PHP, CodeIgniter, JavaScript, HTML, MySQL, Git, Tailwind",
                 },
                 {
                     position: "Full-Stack Software Engineer",
@@ -425,7 +424,6 @@ const portfolioData = {
                     period: "2020 - 2024",
                     description: [
                         "Studied algorithm implementation, web and mobile programming, SQL-based databases, object-oriented programming (OOP), and system design.",
-                        "Successfully completed thesis project, contributing almost 90% to a team project of five people, applying technical skills and demonstrating leadership.",
                     ],
                 },
                 {
@@ -530,7 +528,7 @@ const portfolioData = {
                     title:
                         "Full-Stack Golang Vue NuxtJS: Crowdfunding Website (Course from BuildWithAngga)",
                     description:
-                        "This project was created based on the Full-Stack Golang Vue NuxtJS course. This project is a crowdfunding website using modern technology. During the process, I developed the backend using Golang for the API, and an interactive and responsive frontend using Vue JS and NuxtJS. I also learned and successfully integrated payment using Midtrans Payment Gateway.",
+                        "This project was created based on the Full-Stack Golang Vue NuxtJS course. This project is a crowdfunding website using modern technology. During the process, I developed the backend using Golang for the API, and an interactive and responsive frontend using Vue.js and Nuxt.js. I also learned and successfully integrated payment using Midtrans Payment Gateway.",
                     links: [
                         {
                             text: "Github Backend Link",
@@ -543,13 +541,13 @@ const portfolioData = {
                     ],
                     technologies: {
                         frontend: [
-                            "Vue JS",
-                            "Nuxt JS",
+                            "Vue.js",
+                            "Nuxt.js",
                             "JavaScript",
                             "HTML",
                             "Tailwind",
                         ],
-                        backend: ["Golang", "Gin", "Gorm"],
+                        backend: ["Golang", "Gin Framework", "Gorm"],
                         database: ["MySQL"],
                         tools: ["Postman"],
                     },
@@ -915,7 +913,7 @@ function updateProjects(projects, lang) {
             const carouselId = `projectCarousel${index}`;
 
             carouselHtml = `
-                <div id="${carouselId}" class="carousel slide project-carousel" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
+                <div id="${carouselId}" class="carousel slide project-carousel" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
                     <div class="carousel-indicators">`;
 
             project.images.forEach((image, imgIndex) => {
@@ -930,7 +928,7 @@ function updateProjects(projects, lang) {
             project.images.forEach((image, imgIndex) => {
                 carouselHtml += `
                         <div class="carousel-item ${imgIndex === 0 ? 'active' : ''}">
-                            <img src="${image}" class="d-block w-100" alt="Project Image">
+                            <img src="${image}" class="d-block w-100" alt="Project Image ${imgIndex + 1}" onerror="this.onerror=null; this.src='image1.png'; this.alt='Image not available';">
                         </div>`;
             });
 
@@ -997,6 +995,43 @@ function updateCertifications(certifications, lang) {
     }
 }
 
+// Function to extract all unique technologies from projects
+function getAllTechnologies(projects) {
+    const technologies = new Set();
+    projects.forEach(project => {
+        if (project.technologies) {
+            Object.values(project.technologies).forEach(techList => {
+                if (Array.isArray(techList)) {
+                    techList.forEach(tech => technologies.add(tech));
+                }
+            });
+        }
+    });
+    return Array.from(technologies).sort();
+}
+
+// Function to filter projects by technology
+function filterProjects(tech) {
+    const data = portfolioData[currentLanguage];
+    let filteredProjects = data.projects.items;
+
+    if (tech !== 'all') {
+        filteredProjects = data.projects.items.filter(project => {
+            if (project.technologies) {
+                return Object.values(project.technologies).some(techList => {
+                    if (Array.isArray(techList)) {
+                        return techList.some(techItem => techItem.toLowerCase().includes(tech.toLowerCase()));
+                    }
+                    return false;
+                });
+            }
+            return false;
+        });
+    }
+
+    updateProjects(filteredProjects, currentLanguage);
+}
+
 // Add event listeners for language switching
 document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById("langIdBtn")) {
@@ -1017,4 +1052,42 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize the page
     initializePage();
+
+    // Initialize project filtering if on projects page
+    if (document.getElementById("projectsContainer")) {
+        const data = portfolioData[currentLanguage];
+        const technologies = getAllTechnologies(data.projects.items);
+
+        const filterContainer = document.getElementById("techFilter");
+        technologies.forEach(tech => {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "btn btn-outline-secondary btn-sm mx-1 my-1";
+            button.setAttribute("data-filter", tech);
+            button.textContent = tech;
+            button.addEventListener("click", function() {
+                // Remove active class from all buttons
+                document.querySelectorAll("#techFilter .btn").forEach(btn => {
+                    btn.classList.remove("active");
+                });
+                // Add active class to clicked button
+                this.classList.add("active");
+                // Filter projects
+                filterProjects(tech);
+            });
+            filterContainer.appendChild(button);
+        });
+
+        // Add event listeners to existing "All" button
+        document.querySelector("#techFilter .btn[data-filter='all']").addEventListener("click", function() {
+            // Remove active class from all buttons
+            document.querySelectorAll("#techFilter .btn").forEach(btn => {
+                btn.classList.remove("active");
+            });
+            // Add active class to "All" button
+            this.classList.add("active");
+            // Show all projects
+            updateProjects(data.projects.items, currentLanguage);
+        });
+    }
 });
