@@ -16,14 +16,17 @@ const portfolioData = {
             title: "Keahlian",
             frontend: {
                 title: "Frontend",
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layout"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>`,
                 technologies: "HTML, JavaScript, NextJS",
             },
             backend: {
                 title: "Backend",
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-server"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>`,
                 technologies: "PHP, Laravel, Golang, MySQL, NextJS, CodeIgniter",
             },
             mobile: {
                 title: "Mobile",
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>`,
                 technologies: "React Native",
             },
         },
@@ -328,14 +331,17 @@ const portfolioData = {
             title: "Skills",
             frontend: {
                 title: "Frontend",
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layout"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>`,
                 technologies: "HTML, JavaScript, NextJS",
             },
             backend: {
                 title: "Backend",
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-server"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>`,
                 technologies: "PHP, Laravel, Golang, MySQL, NextJS, CodeIgniter",
             },
             mobile: {
                 title: "Mobile",
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>`,
                 technologies: "React Native",
             },
         },
@@ -652,11 +658,11 @@ function updateContent(lang) {
     // Update skills section (if exists)
     if (document.getElementById("skillsTitle")) {
         document.getElementById("skillsTitle").textContent = data.skills.title;
-        document.getElementById("frontendTitle").textContent = data.skills.frontend.title;
+        document.getElementById("frontendTitle").innerHTML = data.skills.frontend.icon + data.skills.frontend.title;
         document.getElementById("frontendTech").textContent = data.skills.frontend.technologies;
-        document.getElementById("backendTitle").textContent = data.skills.backend.title;
+        document.getElementById("backendTitle").innerHTML = data.skills.backend.icon + data.skills.backend.title;
         document.getElementById("backendTech").textContent = data.skills.backend.technologies;
-        document.getElementById("mobileTitle").textContent = data.skills.mobile.title;
+        document.getElementById("mobileTitle").innerHTML = data.skills.mobile.icon + data.skills.mobile.title;
         document.getElementById("mobileTech").textContent = data.skills.mobile.technologies;
     }
 
@@ -767,7 +773,7 @@ function updateWorkExperience(jobs, lang) {
 
     jobs.forEach((job) => {
         const jobElement = document.createElement("div");
-        jobElement.className = "timeline-item mb-4";
+        jobElement.className = "timeline-item";
 
         let descriptionHtml = "";
         if (Array.isArray(job.description)) {
@@ -781,9 +787,12 @@ function updateWorkExperience(jobs, lang) {
         }
 
         jobElement.innerHTML = `
-            <h5 class="mb-1">${job.position} - ${job.company} (${job.period})</h5>
-            ${descriptionHtml}
-            <p><strong>Teknologi:</strong> ${job.technologies}</p>
+            <div class="timeline-content">
+                <h5>${job.position} - ${job.company}</h5>
+                <p class="period">${job.period}</p>
+                ${descriptionHtml}
+                <p><strong>Teknologi:</strong> ${job.technologies}</p>
+            </div>
         `;
 
         container.appendChild(jobElement);
@@ -798,7 +807,7 @@ function updateInternships(internships, lang) {
 
     internships.forEach((intern) => {
         const internElement = document.createElement("div");
-        internElement.className = "timeline-item mb-4";
+        internElement.className = "timeline-item";
 
         let descriptionHtml = "";
         if (Array.isArray(intern.description)) {
@@ -812,8 +821,11 @@ function updateInternships(internships, lang) {
         }
 
         internElement.innerHTML = `
-            <h5 class="mb-1">${intern.position} - ${intern.company} (${intern.period})</h5>
-            ${descriptionHtml}
+            <div class="timeline-content">
+                <h5>${intern.position} - ${intern.company}</h5>
+                <p class="period">${intern.period}</p>
+                ${descriptionHtml}
+            </div>
         `;
 
         container.appendChild(internElement);
@@ -828,7 +840,7 @@ function updateEducation(educationItems, lang) {
 
     educationItems.forEach((edu) => {
         const eduElement = document.createElement("div");
-        eduElement.className = "timeline-item mb-4";
+        eduElement.className = "timeline-item";
 
         let descriptionHtml = "";
         if (Array.isArray(edu.description)) {
@@ -842,9 +854,12 @@ function updateEducation(educationItems, lang) {
         }
 
         eduElement.innerHTML = `
-            <h5 class="mb-1">${edu.institution}</h5>
-            <p class="text-muted mb-1">${edu.program} (${edu.period})</p>
-            ${descriptionHtml}
+            <div class="timeline-content">
+                <h5>${edu.institution}</h5>
+                <p class="text-muted mb-1">${edu.program}</p>
+                 <p class="period">${edu.period}</p>
+                ${descriptionHtml}
+            </div>
         `;
 
         container.appendChild(eduElement);
@@ -863,23 +878,15 @@ function updateProjects(projects, lang) {
 
         let linkHtml = "";
         if (project.link) {
-            linkHtml = `<a href="${project.link
-                }" target="_blank"><span class="badge bg-success me-2 mb-2">${project.link.includes("github.com")
-                    ? lang === "id"
-                        ? "Link Github"
-                        : "Github Link"
-                    : lang === "id"
-                        ? "Link"
-                        : "Link"
-                }</span></a>`;
+            linkHtml = `<a href="${project.link}" target="_blank" class="btn btn-sm btn-outline-primary mb-2">${project.link.includes("github.com") ? "GitHub" : "Live Demo"}</a>`;
         } else if (project.links) {
             project.links.forEach((link) => {
-                linkHtml += `<a href="${link.url}" target="_blank"><span class="badge bg-success me-2 mb-2">${link.text}</span></a>`;
+                linkHtml += `<a href="${link.url}" target="_blank" class="btn btn-sm btn-outline-primary me-2 mb-2">${link.text}</a>`;
             });
         }
-
+		
         if (project.note) {
-            linkHtml += `<span class="badge bg-warning me-2 mb-2">${project.note}</span>`;
+            linkHtml += `<span class="badge bg-warning text-dark me-2 mb-2">${project.note}</span>`;
         }
 
         let featuresHtml = "";
@@ -894,99 +901,41 @@ function updateProjects(projects, lang) {
             featuresHtml += "</ul>";
         }
 
-        let technologiesHtml =
-            "<h6><strong>" +
-            (lang === "id"
-                ? "Teknologi yang Digunakan:"
-                : "Technologies Used:") +
-            "</strong></h6>";
+        let technologiesHtml = "<div>";
+        const techCategories = Object.keys(project.technologies);
+        techCategories.forEach(category => {
+            const techs = project.technologies[category];
+            if (techs && techs.length > 0) {
+                 techs.forEach((tech) => {
+                    technologiesHtml += `<span class="badge bg-secondary me-1 mb-1">${tech}</span>`;
+                });
+            }
+        });
+        technologiesHtml += "</div>";
 
-        if (project.technologies.frontend) {
-            technologiesHtml +=
-                '<div class="d-flex flex-wrap"><h6>' +
-                (lang === "id" ? "Frontend:&nbsp" : "Frontend:&nbsp") +
-                "</h6>";
-            project.technologies.frontend.forEach((tech) => {
-                technologiesHtml += `<span class="badge bg-primary me-2 mb-2">${tech}</span>`;
-            });
-            technologiesHtml += "</div>";
-        }
-
-        if (project.technologies.backend) {
-            technologiesHtml +=
-                '<div class="d-flex flex-wrap"><h6>' +
-                (lang === "id" ? "Backend:&nbsp" : "Backend:&nbsp") +
-                "</h6>";
-            project.technologies.backend.forEach((tech) => {
-                technologiesHtml += `<span class="badge bg-primary me-2 mb-2">${tech}</span>`;
-            });
-            technologiesHtml += "</div>";
-        }
-
-        if (project.technologies.database) {
-            technologiesHtml +=
-                '<div class="d-flex flex-wrap"><h6>' +
-                (lang === "id" ? "Database:&nbsp" : "Database:&nbsp") +
-                "</h6>";
-            project.technologies.database.forEach((tech) => {
-                technologiesHtml += `<span class="badge bg-primary me-2 mb-2">${tech}</span>`;
-            });
-            technologiesHtml += "</div>";
-        }
-
-        if (project.technologies.mobile) {
-            technologiesHtml +=
-                '<div class="d-flex flex-wrap"><h6>' +
-                (lang === "id" ? "Mobile:&nbsp" : "Mobile:&nbsp") +
-                "</h6>";
-            project.technologies.mobile.forEach((tech) => {
-                technologiesHtml += `<span class="badge bg-primary me-2 mb-2">${tech}</span>`;
-            });
-            technologiesHtml += "</div>";
-        }
-
-        if (project.technologies.machine_learning) {
-            technologiesHtml +=
-                '<div class="d-flex flex-wrap"><h6>' +
-                (lang === "id"
-                    ? "Machine Learning:&nbsp"
-                    : "Machine Learning:&nbsp") +
-                "</h6>";
-            project.technologies.machine_learning.forEach((tech) => {
-                technologiesHtml += `<span class="badge bg-primary me-2 mb-2">${tech}</span>`;
-            });
-            technologiesHtml += "</div>";
-        }
-
-        if (project.technologies.tools) {
-            technologiesHtml +=
-                '<div class="d-flex flex-wrap"><h6>' +
-                (lang === "id" ? "Tools:&nbsp" : "Tools:&nbsp") +
-                "</h6>";
-            project.technologies.tools.forEach((tech) => {
-                technologiesHtml += `<span class="badge bg-primary me-2 mb-2">${tech}</span>`;
-            });
-            technologiesHtml += "</div>";
-        }
 
         let imagesHtml = "";
-        if (project.images) {
+        if (project.images && project.images.length > 0) {
             project.images.forEach((image) => {
-                imagesHtml += `<img src="${image}" width="350" class="img-fluid mb-3 me-2" alt="Project Image">`;
+                imagesHtml += `<img src="${image}" class="img-fluid" alt="Project Image">`;
             });
         }
 
         projectElement.innerHTML = `
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h5 class="fw-bold card-title">${project.title}</h5>
-                    <hr>
-                    <p class="card-text">${project.description}</p>
-                    ${linkHtml}
-                    ${technologiesHtml}
-                    ${featuresHtml}
-                    <p>${project.status}</p>
-                    ${imagesHtml}
+            <div class="card">
+                <div class="project-card-inner">
+                    <div class="project-images">
+                        ${imagesHtml}
+                    </div>
+                    <div class="project-details">
+                        <h5 class="fw-bold card-title">${project.title}</h5>
+                        <p class="card-text">${project.description}</p>
+                        <p><strong>${project.status}</strong></p>
+                        <div class="mb-3">${linkHtml}</div>
+                        <h6><strong>${lang === "id" ? "Teknologi:" : "Technologies:"}</strong></h6>
+                        ${technologiesHtml}
+                        <div class="mt-3">${featuresHtml}</div>
+                    </div>
                 </div>
             </div>
         `;
@@ -994,6 +943,7 @@ function updateProjects(projects, lang) {
         container.appendChild(projectElement);
     });
 }
+
 
 function updateCertifications(certifications, lang) {
     const container = document.getElementById("certificationsList");
