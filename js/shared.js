@@ -647,6 +647,13 @@ function updateContent(lang) {
         document.getElementById("heroTitle").textContent = data.hero.title;
         document.getElementById("heroSubtitle").textContent = data.hero.subtitle;
         document.getElementById("heroCta").textContent = data.hero.cta_text;
+        document.getElementById("heroDescription").textContent = data.about.description;
+        // Set CV button text based on current language
+        const cvButtonText = currentLanguage === 'id' ? 'Lihat CV' : 'View CV';
+        document.getElementById("cvDownloadIdBtn").innerHTML = `<i class="fas fa-file-pdf me-2"></i>${cvButtonText} (ID)`;
+        document.getElementById("cvDownloadIdBtn").href = "CV Muhammad Sultansyah Bahasa Indonesia.pdf";
+        document.getElementById("cvDownloadEnBtn").innerHTML = `<i class="fas fa-file-pdf me-2"></i>${cvButtonText} (EN)`;
+        document.getElementById("cvDownloadEnBtn").href = "CV Muhammad Sultansyah Bahasa Inggris.pdf";
     }
 
     // Update about section (if exists)
