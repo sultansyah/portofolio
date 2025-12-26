@@ -122,6 +122,8 @@ const portfolioData = {
         },
         projects: {
             title: "Proyek Saya",
+            description: "Untuk melihat daftar lengkap proyek saya, silakan kunjungi halaman",
+            link_text: "Proyek",
             items: [
                 {
                     title: "Website Undangan Digital",
@@ -436,6 +438,8 @@ const portfolioData = {
         },
         projects: {
             title: "My Projects",
+            description: "To view my complete list of projects, please visit the",
+            link_text: "Projects",
             items: [
                 {
                     title: "Digital Invitation Website",
@@ -689,6 +693,9 @@ function updateContent(lang) {
     // Update projects (if exists)
     if (document.getElementById("projectsTitle")) {
         document.getElementById("projectsTitle").textContent = data.projects.title;
+        if (document.getElementById("projectsDescription")) {
+            document.getElementById("projectsDescription").innerHTML = `${data.projects.description} <a href="projects.html" id="projectsLink">${data.projects.link_text}</a>.`;
+        }
         updateProjects(data.projects.items, lang);
     }
 
