@@ -16,7 +16,7 @@ const portfolioData = {
             frontend: {
                 title: "Frontend",
                 icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layout"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>`,
-                technologies: "HTML, JavaScript, Next.js, Tailwind",
+                technologies: "HTML, JavaScript, ReactJS, Next.js, Tailwind",
             },
             backend: {
                 title: "Backend",
@@ -39,7 +39,7 @@ const portfolioData = {
                     description:
                         "Memelihara dan mengembangkan aplikasi web dan mobile",
                     technologies:
-                        "Next.js, React Native, PHP, CodeIgniter, JavaScript, HTML, MySQL, Git, Tailwind",
+                        "ReactJS, NextJS, PHP, CodeIgniter, Golang, React Native, JavaScript, HTML, MySQL, Git",
                 },
                 {
                     position: "Full-Stack Software Engineer",
@@ -332,7 +332,7 @@ const portfolioData = {
             frontend: {
                 title: "Frontend",
                 icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layout"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>`,
-                technologies: "HTML, JavaScript, Next.js, Tailwind",
+                technologies: "HTML, ReactJS, JavaScript, Next.js, Tailwind",
             },
             backend: {
                 title: "Backend",
@@ -354,7 +354,7 @@ const portfolioData = {
                     period: "Jul 2025 - Present",
                     description: "Maintain and develop web and mobile applications",
                     technologies:
-                        "Next.js, React Native, PHP, CodeIgniter, JavaScript, HTML, MySQL, Git, Tailwind",
+                        "ReactJS, NextJS, PHP, CodeIgniter, Golang, React Native, JavaScript, HTML, MySQL, Git",
                 },
                 {
                     position: "Full-Stack Software Engineer",
