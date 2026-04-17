@@ -10,7 +10,241 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/custom.css">
+    <style>
+        :root {
+            --page-bg: #eef1f5;
+            --sheet-bg: #ffffff;
+            --text: #111827;
+            --muted: #4b5563;
+            --line: #d1d5db;
+            --accent: #0f172a;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--page-bg);
+            color: var(--text);
+            font-family: "IBM Plex Sans", sans-serif;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .resume-shell {
+            padding: 32px 16px;
+        }
+
+        .resume-sheet {
+            width: min(100%, 960px);
+            margin: 0 auto;
+            background: var(--sheet-bg);
+            border: 1px solid var(--line);
+            box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+            padding: 40px;
+        }
+
+        .identity-block {
+            display: grid;
+            grid-template-columns: minmax(0, 1.9fr) minmax(260px, 1fr);
+            gap: 24px;
+            padding-bottom: 24px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .eyebrow {
+            margin: 0 0 8px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+        }
+
+        .identity-block h1 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+        }
+
+        .headline {
+            margin: 16px 0 0;
+            max-width: 60ch;
+            color: var(--muted);
+        }
+
+        .contact-grid {
+            display: grid;
+            align-content: start;
+            gap: 10px;
+            font-size: 0.96rem;
+        }
+
+        .contact-grid a {
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        .resume-section {
+            padding-top: 26px;
+        }
+
+        .resume-section h2 {
+            margin: 0 0 14px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--accent);
+        }
+
+        .resume-section p,
+        .resume-section li {
+            margin-top: 0;
+            color: var(--text);
+        }
+
+        .resume-section ul {
+            margin: 10px 0 0;
+            padding-left: 18px;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-list span {
+            border: 1px solid var(--line);
+            padding: 6px 10px;
+            font-size: 0.92rem;
+            background: #fafafa;
+        }
+
+        .entry,
+        .project-entry {
+            padding: 16px 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .resume-section>.entry:first-of-type,
+        .resume-section>.project-entry:first-of-type {
+            border-top: 0;
+            padding-top: 0;
+        }
+
+        .entry-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .entry h3,
+        .project-entry h3 {
+            margin: 0;
+            font-size: 1.06rem;
+        }
+
+        .entry-head p,
+        .project-entry p {
+            margin-bottom: 0;
+        }
+
+        .entry-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 16px;
+            margin-top: 4px;
+            color: var(--muted);
+            font-size: 0.93rem;
+        }
+
+        .stack-line,
+        .project-link {
+            margin-top: 10px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .resume-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px;
+        }
+
+        .compact-section .entry {
+            padding: 14px 0;
+        }
+
+        .document-link {
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 860px) {
+            .resume-sheet {
+                padding: 28px 22px;
+            }
+
+            .identity-block,
+            .resume-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .resume-shell {
+                padding: 0;
+            }
+
+            .resume-sheet {
+                padding: 22px 16px 28px;
+                border-left: 0;
+                border-right: 0;
+                box-shadow: none;
+            }
+
+            .entry-head {
+                gap: 6px;
+            }
+
+            .skill-list span {
+                width: 100%;
+                background: transparent;
+            }
+        }
+
+        @media print {
+            body {
+                background: #ffffff;
+            }
+
+            .resume-shell {
+                padding: 0;
+            }
+
+            .resume-sheet {
+                width: 100%;
+                max-width: none;
+                border: 0;
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
