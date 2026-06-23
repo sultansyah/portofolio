@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Muhammad Sultansyah | ATS Resume</title>
+    <title>Muhammad Sultansyah | Software Engineer</title>
     <meta name="description"
-        content="ATS-style resume website for Muhammad Sultansyah, a frontend-focused software engineer with experience in React.js, Next.js, Vue.js, Nuxt.js, TypeScript, Tailwind CSS, and mobile development." />
+        content="Resume website for Muhammad Sultansyah, a software engineer experienced in web, mobile, and desktop applications using Go, React.js, Next.js, Angular, TypeScript, Tailwind CSS, and Jetpack Compose." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -120,12 +120,30 @@
         }
 
         .skill-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .skill-group {
+            display: grid;
+            grid-template-columns: 110px minmax(0, 1fr);
+            gap: 10px 14px;
+            align-items: start;
+        }
+
+        .skill-group h3 {
+            margin: 4px 0 0;
+            font-size: 0.92rem;
+            color: var(--accent);
+        }
+
+        .skill-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
         }
 
-        .skill-list span {
+        .skill-tags span {
             border: 1px solid var(--line);
             padding: 6px 10px;
             font-size: 0.92rem;
@@ -221,7 +239,11 @@
                 gap: 6px;
             }
 
-            .skill-list span {
+            .skill-group {
+                grid-template-columns: 1fr;
+            }
+
+            .skill-tags span {
                 width: 100%;
                 background: transparent;
             }
@@ -252,59 +274,71 @@
         <section class="resume-sheet" aria-label="Resume">
             <header class="identity-block">
                 <div>
-                    <p class="eyebrow">Frontend-Focused Software Engineer</p>
+                    <p class="eyebrow">Software Engineer</p>
                     <h1>Muhammad Sultansyah</h1>
                     <p class="headline">
-                        Frontend developer with experience building responsive, scalable, and modern web applications
-                        using React.js, Next.js, Vue.js, Nuxt.js, TypeScript, Tailwind CSS, and modern UI libraries.
+                        Software engineer with experience building web, mobile, and desktop applications. Skilled in Go,
+                        React.js, Next.js, and Jetpack Compose, with a focus on building useful products that are
+                        reliable, intuitive, and easy to use.
                     </p>
                 </div>
                 <div class="contact-grid" aria-label="Contact information">
+                    <span>Nanggroe Aceh Darussalam, Indonesia</span>
                     <a href="tel:+6285157440542">+62 851 5744 0542</a>
                     <a href="mailto:muhammadsultansyah14@gmail.com">muhammadsultansyah14@gmail.com</a>
-                    <a href="https://sultansyah.github.io/portofolio/" target="_blank" rel="noreferrer">sultansyah.github.io/portofolio</a>
+                    <a href="https://sultansyah.github.io/portofolio/" target="_blank" rel="noopener noreferrer">sultansyah.github.io/portofolio</a>
                     <a href="https://www.linkedin.com/in/muhammad-sultansyah/" target="_blank"
-                        rel="noreferrer">linkedin.com/in/muhammad-sultansyah</a>
+                        rel="noopener noreferrer">linkedin.com/in/muhammad-sultansyah</a>
+                    <a href="https://github.com/sultansyah" target="_blank" rel="noopener noreferrer">github.com/sultansyah</a>
                 </div>
             </header>
 
             <section class="resume-section">
-                <h2>Summary</h2>
+                <h2>Profile</h2>
                 <p>
-                    Strong understanding of state management, API integration, responsive design, and user-focused
-                    interface development. Also experienced across backend and mobile stacks, enabling practical
-                    end-to-end delivery for web and app products.
+                    Software Engineer with experience building web, mobile, and desktop applications. Skilled in Go,
+                    React.js, Next.js, and Jetpack Compose, with a focus on building useful products that are reliable,
+                    intuitive, and easy to use.
                 </p>
             </section>
 
             <section class="resume-section">
                 <h2>Core Skills</h2>
                 <div class="skill-list">
-                    <span>React.js</span>
-                    <span>Next.js</span>
-                    <span>Vue.js</span>
-                    <span>Nuxt.js</span>
-                    <span>TypeScript</span>
-                    <span>JavaScript</span>
-                    <span>Tailwind CSS</span>
-                    <span>Bootstrap</span>
-                    <span>shadcn/ui</span>
-                    <span>Zustand</span>
-                    <span>Pinia</span>
-                    <span>TanStack Query</span>
-                    <span>Node.js</span>
-                    <span>PHP</span>
-                    <span>Laravel</span>
-                    <span>Golang</span>
-                    <span>CodeIgniter</span>
-                    <span>MySQL</span>
-                    <span>PostgreSQL</span>
-                    <span>Docker</span>
-                    <span>React Native</span>
-                    <span>Flutter</span>
-                    <span>Jetpack Compose</span>
-                    <span>Git</span>
-                    <span>GitHub Actions</span>
+                    <div class="skill-group">
+                        <h3>Frontend</h3>
+                        <div class="skill-tags">
+                            <span>React.js</span>
+                            <span>Next.js</span>
+                            <span>Angular</span>
+                            <span>TypeScript</span>
+                            <span>Tailwind CSS</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Backend</h3>
+                        <div class="skill-tags">
+                            <span>Go</span>
+                            <span>Node.js</span>
+                            <span>Express.js</span>
+                            <span>MySQL</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Mobile</h3>
+                        <div class="skill-tags">
+                            <span>Jetpack Compose</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Other</h3>
+                        <div class="skill-tags">
+                            <span>Git</span>
+                            <span>GitHub Actions</span>
+                            <span>AWS (EC2)</span>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -321,19 +355,20 @@
                         <span>Aceh, Indonesia</span>
                     </div>
                     <ul>
-                        <li>Built and maintained responsive government web applications using React.js, Next.js, Tailwind CSS, shadcn/ui, and Bootstrap, with reusable components and scalable frontend architecture.</li>
+                        <li>Built and maintained responsive government web applications using Go, React.js, Next.js, Tailwind CSS, shadcn/ui, and Bootstrap, with reusable components and scalable frontend architecture.</li>
+                        <li>Developed web-based ETL solutions to automate data extraction, transformation, and migration between multiple systems, improving data accuracy and reducing manual work.</li>
                         <li>Improved development speed by implementing reusable UI components using React.js and shadcn/ui.</li>
                         <li>Integrated frontend applications with REST APIs.</li>
                         <li>Improved application security using CORS, CSP, and secure development practices.</li>
                     </ul>
                     <p class="stack-line">
-                        <strong>Tech stack:</strong> React.js, Next.js, Tailwind CSS, TypeScript, PHP, Node.js, Golang, CodeIgniter, Docker, React Native, Git, MySQL
+                        <strong>Tech stack:</strong> Go, Node.js, Next.js, React.js, Tailwind CSS, PHP, CodeIgniter, Docker, React Native, Git, MySQL, PostgreSQL
                     </p>
                 </article>
 
                 <article class="entry">
                     <div class="entry-head">
-                        <h3>Full-Stack Software Engineer</h3>
+                        <h3>Full Stack Software Engineer</h3>
                         <p>The Code</p>
                     </div>
                     <div class="entry-meta">
@@ -348,7 +383,7 @@
                         <li>Taught foundational programming concepts, Python, and problem-solving skills.</li>
                     </ul>
                     <p class="stack-line">
-                        <strong>Tech stack:</strong> React Native, Tailwind CSS, Golang, PHP, Laravel, JavaScript, Python, HTML, SQLite, PostgreSQL, Git, Amazon EC2
+                        <strong>Tech stack:</strong> Golang, PHP, Laravel, React Native, Tailwind CSS, JavaScript, Python, HTML, SQLite, PostgreSQL, Git, Amazon EC2
                     </p>
                 </article>
 
@@ -374,56 +409,55 @@
 
                 <article class="project-entry">
                     <h3>Social Welfare System (SIKESSOS)</h3>
-                    <p class="project-link"><a href="https://sikessos.acehprov.go.id" target="_blank" rel="noreferrer">https://sikessos.acehprov.go.id</a></p>
-                    <p>SIKESOS (Social Welfare Information System) is a web-based application developed to manage and integrate data on beneficiaries, social welfare workers, social institutions, and assistance programs through a centralized platform. Built from scratch using Next.js, Tailwind CSS, shadcn/ui, MySQL, and Docker.</p>
+                    <p class="project-link"><a href="https://sikessos.acehprov.go.id/" target="_blank" rel="noopener noreferrer">https://sikessos.acehprov.go.id/</a></p>
+                    <p>SIKESSOS (Social Welfare Information System) is a web-based application developed to manage and integrate data on beneficiaries, social welfare workers, social institutions, and assistance programs through a centralized platform. Built from scratch using Next.js, Tailwind CSS, shadcn/ui, MySQL, and Docker.</p>
                 </article>
 
                 <article class="project-entry">
                     <h3>Satu Data</h3>
-                    <p class="project-link"><a href="https://satudata.acehprov.go.id" target="_blank" rel="noreferrer">https://satudata.acehprov.go.id</a></p>
+                    <p class="project-link"><a href="https://satudata.acehprov.go.id/" target="_blank" rel="noopener noreferrer">https://satudata.acehprov.go.id/</a></p>
                     <p>Satu Data is a dynamic data management platform developed for the Aceh Government, enabling administrators to manage data from regencies/cities before publishing it to Open Data. The system includes dynamic form creation features. I was responsible for developing new features and maintaining the system. Built using Node.js, Next.js, MySQL, Redis, and Docker.</p>
                 </article>
 
                 <article class="project-entry">
                     <h3>Tulis Surat</h3>
-                    <p class="project-link"><a href="https://tulissurat.com" target="_blank" rel="noreferrer">https://tulissurat.com</a></p>
+                    <p class="project-link"><a href="https://tulissurat.com/" target="_blank" rel="noopener noreferrer">https://tulissurat.com/</a></p>
                     <p>TulisSurat is a web platform for creating resumes, professional letters, and productivity tools quickly, with PDF and Word downloads without login. Built from scratch using Nuxt.js, Tailwind CSS, shadcn/ui, and MySQL.</p>
                 </article>
 
                 <article class="project-entry">
                     <h3>JDIH</h3>
-                    <p class="project-link"><a href="https://jdih.acehprov.go.id" target="_blank" rel="noreferrer">https://jdih.acehprov.go.id</a></p>
-                    <p>JDIHN is a legal information system that provides fast and integrated access to legal documents and regulations, supporting accurate information services and legal certainty for the public. I was responsible for developing new features and maintaining the system. Built using PHP, CodeIgniter, and MySQL.</p>
+                    <p class="project-link"><a href="https://jdih.acehprov.go.id/" target="_blank" rel="noopener noreferrer">https://jdih.acehprov.go.id/</a></p>
+                    <p>JDIH is a legal information system that provides fast and integrated access to legal documents and regulations, supporting accurate information services and legal certainty for the public. I was responsible for developing new features and maintaining the system. Built using PHP, CodeIgniter, and MySQL.</p>
                 </article>
 
                 <article class="project-entry">
                     <h3>Saudara</h3>
-                    <p class="project-link"><a href="https://saudaradispora.acehprov.go.id" target="_blank" rel="noreferrer">https://saudaradispora.acehprov.go.id</a></p>
+                    <p class="project-link"><a href="https://saudaradispora.acehprov.go.id/" target="_blank" rel="noopener noreferrer">https://saudaradispora.acehprov.go.id/</a></p>
                     <p>SAUDARA is a web-based application for managing youth, sports, organizations, facilities, and achievement data in a centralized platform, with verification, reporting, and monitoring features. I was responsible for maintaining the system. Built using PHP, CodeIgniter, and MySQL.</p>
                 </article>
 
                 <article class="project-entry">
                     <h3>Profilkes</h3>
-                    <p class="project-link"><a href="https://profilkes.acehprov.go.id" target="_blank" rel="noreferrer">https://profilkes.acehprov.go.id</a></p>
+                    <p class="project-link"><a href="https://profilkes.acehprov.go.id/" target="_blank" rel="noopener noreferrer">https://profilkes.acehprov.go.id/</a></p>
                     <p>E-Profilkes is a digital health data platform that provides fast, transparent, and centralized access to health indicators to support evaluation and decision-making. I was responsible for maintaining the system. Built using PHP, CodeIgniter, and MySQL.</p>
                 </article>
 
                 <article class="project-entry">
                     <h3>ETL Profilkes2CKAN</h3>
-                    <p class="project-link"><a href="https://profilkes2ckan.etl.siat.web.id" target="_blank" rel="noreferrer">https://profilkes2ckan.etl.siat.web.id</a></p>
+                    <p class="project-link"><a href="https://profilkes2ckan.etl.siat.web.id/" target="_blank" rel="noopener noreferrer">https://profilkes2ckan.etl.siat.web.id/</a></p>
                     <p>ETL-Profilkes is a data integration system that extracts, transforms, and synchronizes health data from the Health Profile application to the CKAN Open Data. Built from scratch using Node.js, Express.js, React.js, Tailwind CSS, and Docker.</p>
                 </article>
 
                 <article class="project-entry">
                     <h3>ETL CKAN2SatuData</h3>
-                    <p class="project-link"><a href="https://ckan2satudata.etl.siat.web.id" target="_blank" rel="noreferrer">https://ckan2satudata.etl.siat.web.id</a></p>
+                    <p class="project-link"><a href="https://ckan2satudata.etl.siat.web.id/" target="_blank" rel="noopener noreferrer">https://ckan2satudata.etl.siat.web.id/</a></p>
                     <p>ETL CKAN2SatuData is a data integration system to extract, transform, and synchronize data from CKAN Open Data to the Satu Data Aceh Portal. I was responsible for developing new features and maintaining the system. Built using PHP.</p>
                 </article>
             </section>
 
-            <section class="resume-grid">
-                <section class="resume-section compact-section">
-                    <h2>Internship</h2>
+            <section class="resume-section compact-section">
+                <h2>Internship</h2>
 
                     <article class="entry compact-entry">
                         <div class="entry-head">
@@ -454,10 +488,10 @@
                             <li>Resolved customer issues in a timely and professional manner.</li>
                         </ul>
                     </article>
-                </section>
+            </section>
 
-                <section class="resume-section compact-section">
-                    <h2>Education</h2>
+            <section class="resume-section compact-section">
+                <h2>Education</h2>
 
                     <article class="entry compact-entry">
                         <div class="entry-head">
@@ -491,28 +525,22 @@
                         </div>
                         <p>Built a foundation in web programming and software engineering basics.</p>
                     </article>
-                </section>
             </section>
 
-            <section class="resume-grid">
-                <section class="resume-section compact-section">
-                    <h2>Certification</h2>
-                    <article class="entry compact-entry">
-                        <h3>Junior Programmer</h3>
-                        <p>National Professional Certification Agency (BNSP)</p>
-                        <div class="entry-meta">
-                            <span>Sep 2025 - Sep 2028</span>
-                        </div>
-                    </article>
-                </section>
+            <section class="resume-section compact-section">
+                <h2>Certification</h2>
+                <article class="entry compact-entry">
+                    <h3>Junior Programmer Certification</h3>
+                    <p>BNSP (Indonesia National Professional Certification Agency)</p>
+                </article>
+            </section>
 
-                <section class="resume-section compact-section">
-                    <h2>Document</h2>
-                    <article class="entry compact-entry">
-                        <p>Prefer the original PDF version for direct ATS submission.</p>
-                        <p><a class="document-link" href="CV Muhammad Sultansyah.pdf" target="_blank" rel="noreferrer">Open CV Muhammad Sultansyah.pdf</a></p>
-                    </article>
-                </section>
+            <section class="resume-section compact-section">
+                <h2>Document</h2>
+                <article class="entry compact-entry">
+                    <p>Prefer the original PDF version for direct ATS submission.</p>
+                    <p><a class="document-link" href="CV Muhammad Sultansyah.pdf" target="_blank" rel="noopener noreferrer">Open CV Muhammad Sultansyah.pdf</a></p>
+                </article>
             </section>
         </section>
     </main>
